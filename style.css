@@ -6,76 +6,29 @@
     box-sizing: border-box;
 }
 
-.biografia{
-    width: 100%;
-    margin-top: 25px;
-}
-
-.biografia article{
-    max-width: 87%;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-
-.biografia p{
-    font-size: 20px;,
-    text-align: center;
-}
-
-.principal{
-    background-color: #F0F8FF;
-}
-
-.nav-bar-pc{
-    display: none;
-}
-
-header{
-    overflow: hidden;
-    height: 115px;
-}
-
-
-header .icons{
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
-    margin-left: 17px;
-}
-
-
-
-header .icons a{
-    font-size: 25px;
-    color: black;
-    padding: 10px;
-}
-
-
-
+/* Menu Hamburger Animado */
 #check{
 display: none;
 }
 
-
 .checkbtn{
+    width: 50px;
+    height: 50px;
+    background: #B0C4DE;
     display: flex;
-    justify-content: flex-end;
-    margin-top: -44px;
-    padding-right: 15px;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
 }
 
-
 .hamburger{
-    z-index: 1;
+    z-index: 3;
     display: block;
     background: #000;
     width: 30px;
     height: 2px;
     position: relative;
 }
-
 
 .hamburger:before, .hamburger:after{
     background : #000;
@@ -84,9 +37,8 @@ display: none;
     width: 30px;
     height: 2px;
     position: absolute;
-    transition: .5s ease-in;
+    transition: .5s linear;
 }
-
 
 .hamburger:before{
     top: -10px;
@@ -96,9 +48,9 @@ display: none;
     bottom: -10px;
 }
 
-
 #check:checked ~ label .hamburger{
     transform: rotate(45deg);
+    position: fixed;
 }
 
 #check:checked ~ label .hamburger:before{
@@ -111,77 +63,98 @@ display: none;
     bottom: 0px;
 }
 
+/* Fim */
 
-ul{
+.alinhar-secoes{
+    display: flex;
     width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 17px 0 17px;
+    background-color: #F0F8FF;
+}
+
+.alinhar-secoes ul{
+    display: flex;
+}
+
+.alinhar-secoes ul li a{
+    font-size: 25px;
+    color: black;
+    padding: 10px;
+}
+
+.alinhar-secoes ul li a:hover{
+    font-size: 30px;
+}
+
+#menu-lateral{
+    width: 0;
     height: 100vh;
+    background-color: #FAF0E6;
+    margin-top: -80px;
+    position: fixed;
+    z-index: 2;
+    transition: .5s linear;
+    overflow: hidden;
+}
+
+#menu-lateral ul{
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -15%;
-    background-color: #FAF0E6;
-    position: fixed;
-    left: -100%;
-    transition: all .5s;
 }
 
 
-#check:checked ~ ul{
-    left: 0;
-}
-
-
-nav ul li{
+#menu-lateral ul li{
     padding: 15px;
-    background-color: #FAF0E6;
 }
 
 
-nav ul li a{
+#menu-lateral ul li a{
     font-size: 30px;
     font-family: Roboto;
     font-weight: bold;
-    background-color: #FAF0E6;
     color: #000;
 }
 
 main{
-    margin-top: -20px;
+    background-color: #F0F8FF;
     padding-bottom: 60px;
 }
 
-main p{
+main h1{
     font-family: Playfair Display;
     font-size: 30px;
     text-align: center;
+    padding-top: 60px;
+    font-weight: normal;
 }
 
-
-main span p{
+main h2{
     text-align: center;
     font-family: Roboto;
     margin-top: 20px;
     font-size: 20px;
     letter-spacing: 4px;
+    font-weight: normal;
 }
-
 
 main .fotos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 90%;
+    margin: 0 auto 0 auto;
     margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-
-main .fotos article{
-    margin-top: 20px;
-}
-
-main .fotos article img{
+main .fotos img{
     width: 300px;
+    padding: 15px;
 }
 
 footer{
@@ -190,7 +163,6 @@ footer{
     color: #fff;
     text-align:center;
 }
-
 
 footer h1{
     font-size: 30px;
@@ -218,141 +190,97 @@ footer form p textarea{
     border: none;
 }
 
-footer form p .butao{
+footer form p .botao{
    background-color: #B0E0E6; 
    border: none;
    margin-top: 15px;
+   margin-bottom: 30px;
+   font-size: 18px;
 }
 
-
-@media screen and (max-width: 766px) and (orientation: landscape) {
-    header nav ul{
-        padding-top: 20px;
-    }
-
-    header nav ul li{
-        padding: 12px;
-    }
-
-
-    main .fotos{
-        margin-top: -1px;
-    }
-
-    main .fotos .linha, .linha1, .linha2, .linha3{
-        display: flex;
-    }
-
-   main .fotos article img{
-       max-width: 190px;
-       padding: 8px;
-    }
+.bio{
+    padding-top: 40px;
+    max-width: 90%;
+    margin: 0 auto 0 auto;
+    text-align: center;
 }
 
 
 
-/* Configuração pra PC */
+/* Versão Desktop */
 
-@media (min-width: 768px){
-
-    .nav-bar-m{
+@media (min-width: 1000px){
+    .checkbtn{
         display: none;
     }
 
-    .nav-bar-pc{
-        display: block;
-    }
-
-    .nav-bar-pc .icons{
-        padding:20px;
-    }
-
-    .nav-bar-pc .icons a{
-        font-size: 45px;
-        padding: 18px;
-
-    }
-
-    .nav-bar-pc nav{
-        display: flex;
-        justify-content: flex-end;
-        margin-top: -40px;
-        padding-right: 18px;
-    }
-
-    .nav-bar-pc nav a{
-        font-size: 30px;
-        padding: 10px;
-        color: #000;
-    }
-
-    main p{
-        font-size: 50px;
-        padding-top: 60px;
-    }
-     
-    main span p{
-        font-size: 37px;
-        margin-top: -20px;
-    }
-
-    main .fotos .linha, .linha1, .linha2, .linha3{
-        display: flex;
-    }
-
-   main .fotos article img{
-       max-width: 300px;
-       padding: 14px;
-    }
-    
-
-    footer .ff{
-        text-align: center;
-    }
-
-    footer .f{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 15px;
-    }
-
-    footer .f .ff{
+    .topo-pagina{
+        height: 80px;
         width: 100%;
-    }
-
-    footer .bb{
         display: flex;
         flex-direction: row;
+    }
+
+    #menu-lateral{
+        width: 100%;
+        height: 80px;
+        margin-top: 1px;
+        position: static;
+        background-color: #F0F8FF;
+    }
+
+    #menu-lateral ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 17px 17px 0 17px;
+    }
+
+    .alinhar-secoes ul li a{
+        font-size: 30px;
+        padding: 20px;
+    }
+    
+    main h1{
+        font-size: 50px;
+    }
+
+    main h2{
+        margin-top: 20px;
+        font-size: 37px;
+    }
+
+    main .fotos img{
+        width: 350px;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-around;
         align-items: center;
     }
 
-    footer .bb .frase{
+    footer .frase{
         display: block;
-        padding: 10px;
-        max-width: 50%;
+        width: 50%;
+        text-align: center;
         font-size: 25px;
     }
 
-    footer .bb .frase .aspas{
+    footer .frase:before, footer .frase:after{
+        content: '"';
         font-size: 39px;
         padding: 15px;
         font-weight: bold;
     }
 
-    footer p span{
-        font-size: 19px;
-        font-weight: bold;
-    }
-
-    footer .f .ff  h1{
-        font-weight: bold;
-        font-size: 37px;
-    }
-
-    footer form{
+    footer form p input{
         width: 100%;
     }
 
+    footer form p textarea{
+        width: 100%;
+    }
 
 }
+
