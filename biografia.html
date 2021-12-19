@@ -34,7 +34,7 @@
                     <li><a href="index.html">Início</a></li>
                     <li><a href="gestantes.html">Gestantes</a></li>
                     <li><a href="familia.html">Família</a></li>
-                    <li><a href="#">Biografia</a></li>
+                    <li><a onclick="FuncAbrirMenuLateral()" href="#">Biografia</a></li>
                 </ul>
             </nav>
         </header>
@@ -42,7 +42,16 @@
         <main>
             <h1>GABRIEL SANTANA</h1>
             <h2>BIOGRAFIA</h2>
-            <div class="bio">Lorem inventore debitis beatae facere dolorum quis exercitationem Magni praesentium odio libero repudiandae officiis excepturi? Expedita doloremque dolores unde nobis in? Exercitationem odit aperiam consequuntur ea neque? Ducimus facilis vero cumque eveniet aliquid fugiat ipsam animi Ullam quas minus ullam officiis laboriosam Voluptate itaque dicta esse perferendis vel animi. Corporis fuga dolore ut eligendi expedita. Maxime minima quod a ipsa nemo. Optio iste omnis itaque maiores velit. Deserunt doloribus quo a officiis amet corporis labore. Obcaecati sed molestias consequuntur quas atque Temporibus dicta nemo numquam itaque dolorum labore nobis Est quasi nulla nesciunt illum at? Est aliquam officiis ducimus esse!orem inventore debitis beatae facere dolorum quis exercitationem Magni praesentium odio libero repudiandae officiis excepturi? Expedita doloremque dolores unde nobis in? Exercitationem odit aperiam consequuntur ea neque? Ducimus facilis vero cumque eveniet aliquid fugiat ipsam animi Ullam quas minus ullam officiis laboriosam Voluptate itaque dicta esse perferendis vel animi. Corporis fuga dolore ut eligendi expedita. Maxime minima quod a ipsa nemo. Optio iste omnis itaque maiores velit. Deserunt doloribus quo a officiis amet corporis labore. Obcaecati sed molestias consequuntur quas atque Temporibus dicta nemo numquam itaque dolorum labore nobis Est quasi nulla nesciunt illum at? Est aliquam officiis ducimus esse!</div>
+
+            <!-- Botão de escolher tema -->
+            <div class="pos">
+                <div id="circulo">
+                    <div class="claro"></div>
+                    <div class="escuro"></div>
+                </div>
+            </div>
+
+            <p class="bio">Lorem inventore debitis beatae facere dolorum quis exercitationem Magni praesentium odio libero repudiandae officiis excepturi? Expedita doloremque dolores unde nobis in? Exercitationem odit aperiam consequuntur ea neque? Ducimus facilis vero cumque eveniet aliquid fugiat ipsam animi Ullam quas minus ullam officiis laboriosam Voluptate itaque dicta esse perferendis vel animi. Corporis fuga dolore ut eligendi expedita. Maxime minima quod a ipsa nemo. Optio iste omnis itaque maiores velit. Deserunt doloribus quo a officiis amet corporis labore. Obcaecati sed molestias consequuntur quas atque Temporibus dicta nemo numquam itaque dolorum labore nobis Est quasi nulla nesciunt illum at? Est aliquam officiis ducimus esse!orem inventore debitis beatae facere dolorum quis exercitationem Magni praesentium odio libero repudiandae officiis excepturi? Expedita doloremque dolores unde nobis in? Exercitationem odit aperiam consequuntur ea neque? Ducimus facilis vero cumque eveniet aliquid fugiat ipsam animi Ullam quas minus ullam officiis laboriosam Voluptate itaque dicta esse perferendis vel animi. Corporis fuga dolore ut eligendi expedita. Maxime minima quod a ipsa nemo. Optio iste omnis itaque maiores velit. Deserunt doloribus quo a officiis amet corporis labore. Obcaecati sed molestias consequuntur quas atque Temporibus dicta nemo numquam itaque dolorum labore nobis Est quasi nulla nesciunt illum at? Est aliquam officiis ducimus esse!</p>
         </main>
 
         <footer>
@@ -53,10 +62,10 @@
                 <p>Entre em contato caso queira falar sobre algum projeto.</p>
 
                 <form action="https://formspree.io/f/xdopwaee" method="POST">
-                   <p><input type="name" placeholder="Nome" name="name" required="required"></p>
-                    <p><input type="email" placeholder="Email" name="name" required="required"></p>
-                    <p><textarea placeholder=" Deixe sua proposta" name="name" required="required" cows=50 rows=10></textarea></p>
-                    <p><input class="botao" type='submit' required="required" name='name' value="enviar"></p>
+                    <input type="name" placeholder="Nome" name="name" required="required">
+                    <input type="email" placeholder="Email" name="name" required="required">
+                    <textarea placeholder=" Deixe sua proposta" name="name" required="required" cows=50 rows=10></textarea>
+                    <input class="botao" type='submit' required="required" name='name' value="enviar">
                 </form>
             </div>
 

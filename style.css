@@ -175,21 +175,23 @@ footer .frase{
 
 footer form{
     padding-top: 35px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
 }
 
-footer form p input{
-    width: 80%;
+footer form input{
     padding: 15px;
     margin-bottom: 15px;
     border: none;
 }
 
-footer form p textarea{
-    width: 80%;
+footer form textarea{
     border: none;
 }
 
-footer form p .botao{
+footer form .botao{
    background-color: #B0E0E6; 
    border: none;
    margin-top: 15px;
@@ -202,7 +204,35 @@ footer form p .botao{
     max-width: 90%;
     margin: 0 auto 0 auto;
     text-align: center;
+    line-height: 30px;
 }
+
+.pos{
+    position: fixed;
+    top: 85%;
+    left: 95vw;
+}
+
+.pos #circulo{
+    display: flex;
+}
+
+.pos #circulo .escuro{
+    width: 25px;
+    height: 40px;
+    z-index: 2;
+    background-color: #000;
+    border-radius: 0% 50% 50% 0%;
+}
+
+.pos #circulo .claro{
+    width: 25px;
+    height: 40px;
+    z-index: 2;
+    background-color: yellow;
+    border-radius: 50% 0% 0% 50%;
+}
+
 
 /* Mini */
 @media (max-width: 365px){
@@ -265,6 +295,12 @@ footer form p .botao{
         align-items: center;
     }
 
+
+    footer form{
+        width: 100%;
+    }
+
+
     footer .frase{
         display: block;
         width: 50%;
@@ -278,14 +314,5 @@ footer form p .botao{
         padding: 15px;
         font-weight: bold;
     }
-
-    footer form p input{
-        width: 100%;
-    }
-
-    footer form p textarea{
-        width: 100%;
-    }
-
 }
 

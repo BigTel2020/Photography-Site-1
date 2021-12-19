@@ -33,7 +33,7 @@
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="gestantes.html">Gestantes</a></li>
-                    <li><a href="#">Família</a></li>
+                    <li><a onclick="FuncAbrirMenuLateral()" href="#">Família</a></li>
                     <li><a href="biografia.html">Biografia</a></li>
                 </ul>
             </nav>
@@ -42,6 +42,14 @@
         <main>
             <h1>GABRIEL SANTANA</h1>
             <h2>FOTOGRAFIA</h2>
+
+            <!-- Botão de escolher tema -->
+            <div class="pos">
+                <div id="circulo">
+                    <div class="claro"></div>
+                    <div class="escuro"></div>
+                </div>
+            </div>
 
             <div class="fotos">
                 <img src="imagens-familia/foto1.jpg" alt="Imagem modelo número 1">
@@ -67,10 +75,10 @@
                 <p>Entre em contato caso queira falar sobre algum projeto.</p>
 
                 <form action="https://formspree.io/f/xdopwaee" method="POST">
-                   <p><input type="name" placeholder="Nome" name="name" required="required"></p>
-                    <p><input type="email" placeholder="Email" name="name" required="required"></p>
-                    <p><textarea placeholder=" Deixe sua proposta" name="name" required="required" cows=50 rows=10></textarea></p>
-                    <p><input class="botao" type='submit' required="required" name='name' value="enviar"></p>
+                    <input type="name" placeholder="Nome" name="name" required="required">
+                    <input type="email" placeholder="Email" name="name" required="required">
+                    <textarea placeholder=" Deixe sua proposta" name="name" required="required" cows=50 rows=10></textarea>
+                    <input class="botao" type='submit' required="required" name='name' value="enviar">
                 </form>
             </div>
 
