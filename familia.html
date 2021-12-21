@@ -12,44 +12,39 @@
     </head>
 
     <body>
-        
-        <header class="topo-pagina">
-            <div class="alinhar-secoes">
-                <ul>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                </ul>
+        <header>
+            <ul class="social">
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+            </ul>
 
-                <input type="checkbox" id="check">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <span class="hamburger"></span>
+            </label>
 
-                <label for="check" class="checkbtn" onclick="FuncAbrirMenuLateral()">
-                    <span class="hamburger"></span>
-                </label>
-            </div>
-
-            <nav id="menu-lateral">
+            <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="gestantes.html">Gestantes</a></li>
-                    <li><a onclick="FuncAbrirMenuLateral()" href="#">Família</a></li>
+                    <li><a onclick="FuncClose()" href="#">Família</a></li>
                     <li><a href="biografia.html">Biografia</a></li>
                 </ul>
             </nav>
         </header>
+
 
         <main>
             <h1>GABRIEL SANTANA</h1>
             <h2>FOTOGRAFIA</h2>
 
             <!-- Botão de escolher tema -->
-            <div class="pos">
-                <div id="circulo">
-                    <div class="claro"></div>
-                    <div class="escuro"></div>
-                </div>
-            </div>
+            <input type="checkbox" id="tema">
+            <label for="tema" class="pos">
+                 <span><i class="far fa-lightbulb"></i></span>
+            </label>
 
             <div class="fotos">
                 <img src="imagens-familia/foto1.jpg" alt="Imagem modelo número 1">
@@ -72,7 +67,7 @@
 
             <div>
                 <h1>Me mande uma mensagem.</h1>
-                <p>Entre em contato caso queira falar sobre algum projeto.</p>
+                <p class="f2">Entre em contato caso queira falar sobre algum projeto.</p>
 
                 <form action="https://formspree.io/f/xdopwaee" method="POST">
                     <input type="name" placeholder="Nome" name="name" required="required">
